@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "prepare": "husky install"
+  },
   "devDependencies": {
     "husky": "^6.0.0",
     "lerna": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lerna exec npx lint-staged"
-    }
   }
 }
