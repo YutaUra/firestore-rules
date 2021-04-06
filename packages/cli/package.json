@@ -1,0 +1,39 @@
+{
+  "name": "@firebase-rules/cli",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "YutaUra <yuuta3594@outlook.jp>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/cli.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint:lint": "prettier --list-different './src/**/*.{js,ts,json}'",
+    "lint:format": "prettier --write './src/**/*.{js,ts,json}'",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@firebase-rules/core": "^0.0.0",
+    "lint-staged": "^10.5.4"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,ts,json}": [
+      "npm run lint:format",
+      "git add"
+    ]
+  }
+}
