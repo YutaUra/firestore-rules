@@ -23,22 +23,22 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@firestore-rules/cli@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/cli/-/cli-0.1.8.tgz#412fd30e0525f2a8ff1aa25925e34d3328d16bfb"
-  integrity sha512-qGFuVr+TVGHZnMo7B64OMy/NeMNv05MZ4MUVFf7z/n2QPWpzfmsSpdV171aJ/FRoECCyh4momRIP/7R/cwzBFw==
+"@firestore-rules/cli@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/cli/-/cli-0.1.10.tgz#44a912d2df72939487e3aee2515aeed62d347a04"
+  integrity sha512-KP+WDIxYAV6/8NVV9nlqiTlGymoGrPMUrpTCNADK6QovHsFkMTR/t9XCY6k8OQjW74PMjYBz12XufTK+qqC6Yg==
   dependencies:
-    "@firestore-rules/core" "^0.1.8"
+    "@firestore-rules/core" "^0.1.10"
     "@firestore-rules/formatter" "^0.1.8"
-    "@firestore-rules/model" "^0.1.8"
+    "@firestore-rules/model" "^0.1.10"
     cosmiconfig "^7.0.0"
     lint-staged "^10.5.4"
     ts-node "^9.1.1"
 
-"@firestore-rules/core@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/core/-/core-0.1.8.tgz#59c00739a39761a92e4f1c7e733ec6695349bc26"
-  integrity sha512-4/BiKR/L2vH8Hbbm4lzz2bQUJFllz80rwHL5g7BeLQfLbLE7w0mPe0D5isSq6TP0rS/PkLtbcqX2JmeUZ/qzzw==
+"@firestore-rules/core@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/core/-/core-0.1.10.tgz#a15e4d127b9be9433e1e95714b09f8ad1d473d71"
+  integrity sha512-2OJvIib7gJ3LbjNu1mgbZpb2c4A7w0p4Fjfl9qyCNa82AtvAr6H+O3h/BpTBL8ZKE4+FhSITAV+VXxJ1RajoHQ==
   dependencies:
     lint-staged "^10.5.4"
 
@@ -49,12 +49,12 @@
   dependencies:
     lint-staged "^10.5.4"
 
-"@firestore-rules/model@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/model/-/model-0.1.8.tgz#c7d4cc2028fec1235b941682f03bf7e466b7511e"
-  integrity sha512-C5IMx/uMR3R/MzZ1fai1mSM4I0RDD/ZyDor/i1W6n94qzpbjp1wG0ZRPghSr1YkuF+dWveANBVidcopsW0Kzlg==
+"@firestore-rules/model@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/model/-/model-0.1.10.tgz#97cbb18650ee485e648d56a97b458ed7bd84f982"
+  integrity sha512-NIyujdXVAIGIuOz3DqFWeMtjk54/StgGAi4o6+bygrGwXLGz2kHKeWRG0twAtDoLxkJMG/YMaulTHrByBT2wBw==
   dependencies:
-    "@firestore-rules/core" "^0.1.8"
+    "@firestore-rules/core" "^0.1.10"
     lint-staged "^10.5.4"
 
 "@types/parse-json@^4.0.0":

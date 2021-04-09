@@ -11,6 +11,6 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@firestore-rules/cli": "^0.1.8"
+    "@firestore-rules/cli": "^0.1.10"
   }
 }

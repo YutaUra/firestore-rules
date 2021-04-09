@@ -18,16 +18,14 @@ create `./src/firestore-rules.ts`
 ```ts
 // ./src/firestore-rules.ts
 
-import { FirestoreRulesModel, literal, op } from '@firestore-rules/cli'
+import { FirestoreRulesModel, type, op } from '@firestore-rules/cli'
 
 export default class extends FirestoreRulesModel {
   get path() {
     return '/databases/{database}/documents'
   }
   get isAuthenticated() {
-    return this.defineFunc(
-      op.ne(this.ctx.request.auth, new literal.FirestoreRulesLiteralNull())
-    )
+    return this.defineFunc(op.ne(this.ctx.request.auth, new type.Null()))
   }
   get isMe() {
     const uid = this.args('uid')
