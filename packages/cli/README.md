@@ -105,6 +105,7 @@ See [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for other specif
 ```yaml
 rulesPath: string # path to firestore-rules file. (default is './src/firestore-rules.ts')
 typescript: boolean # if you do not use typescript, turn off. (default is true)
+tsconfigPath: string # path to your tsconfig file. (default is './tsconfig.json')
 outputPath: string # path to generate file. (default is 'firestore.rules')
 backupFile: boolean # if you don't want to create backup file, turn off. (default is true)
 formatOption: # options for formatter
@@ -124,6 +125,12 @@ Default is `./src/firestore-rules.ts`.
 Set to true if you want to use Typescript.
 
 Default is true.
+
+#### tsconfigPath
+
+If you use TypeScript, you should provide valid tscondif file.
+
+Default is `./tsconfig.json`
 
 #### outputPath
 

@@ -18,13 +18,15 @@ if (!searchedFor) {
 const {
   rulesPath = './src/firestore-rules.ts',
   typescript = true,
+  tsconfigPath = './tsconfig.json',
   outputPath = 'firestore.rules',
   backupFile = true,
   formatOption = {},
 } = searchedFor.config
 
 if (typescript) {
-  register()
+  const tsconfig = JSON.parse(readFileSync(resolve(tsconfigPath)).toString())
+  register(tsconfig)
 }
 
 const cls = require(resolve(rulesPath)).default as unknown
