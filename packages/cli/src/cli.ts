@@ -16,17 +16,12 @@ if (!searchedFor) {
 }
 
 const {
-  rulesPath,
+  rulesPath = './src/firestore-rules.ts',
   typescript = true,
   outputPath = 'firestore.rules',
   backupFile = true,
   formatOption = {},
 } = searchedFor.config
-
-if (!rulesPath) {
-  console.error('configuration for rules path was not provided!')
-  process.exit(1)
-}
 
 if (typescript) {
   register()

@@ -23,38 +23,38 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@firestore-rules/cli@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/cli/-/cli-0.1.7.tgz#def8d7663bac49e63a322534bec915e7f4adbbc9"
-  integrity sha512-5/RCldBXXE4BEp5BUrBJCDlbiY90pdXVPews30hGJGF6MuKeTYVBnMBjMBfourGsn+1KIQVMcFyeGtOojAeU1w==
+"@firestore-rules/cli@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/cli/-/cli-0.1.8.tgz#412fd30e0525f2a8ff1aa25925e34d3328d16bfb"
+  integrity sha512-qGFuVr+TVGHZnMo7B64OMy/NeMNv05MZ4MUVFf7z/n2QPWpzfmsSpdV171aJ/FRoECCyh4momRIP/7R/cwzBFw==
   dependencies:
-    "@firestore-rules/core" "^0.1.4"
-    "@firestore-rules/formatter" "^0.1.7"
-    "@firestore-rules/model" "^0.1.4"
+    "@firestore-rules/core" "^0.1.8"
+    "@firestore-rules/formatter" "^0.1.8"
+    "@firestore-rules/model" "^0.1.8"
     cosmiconfig "^7.0.0"
     lint-staged "^10.5.4"
     ts-node "^9.1.1"
 
-"@firestore-rules/core@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/core/-/core-0.1.4.tgz#2465777e8b9fb929ff4356a75f22f6baa0e13673"
-  integrity sha512-OYVgxjUdC48eWvflhTlEXodMapxPGUXabJwDW5/8nIQjQfcReEc9Sj5WcxeXEcmsECxbBV2EQ5gKroDdB3LMDQ==
+"@firestore-rules/core@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/core/-/core-0.1.8.tgz#59c00739a39761a92e4f1c7e733ec6695349bc26"
+  integrity sha512-4/BiKR/L2vH8Hbbm4lzz2bQUJFllz80rwHL5g7BeLQfLbLE7w0mPe0D5isSq6TP0rS/PkLtbcqX2JmeUZ/qzzw==
   dependencies:
     lint-staged "^10.5.4"
 
-"@firestore-rules/formatter@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/formatter/-/formatter-0.1.7.tgz#cf9be30d7d39e4eb7ab51240e56deef7a6772779"
-  integrity sha512-4wbpHvrrDgZtnVZ3XI6f03ZpPeCh2PpHG+vt1hb+i9gtzw1/Jpt3ZXbp/VzkZ6e2PdjY4m/64xUm7ygDgV0veg==
+"@firestore-rules/formatter@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/formatter/-/formatter-0.1.8.tgz#c48e4cbcf1ce23606bdeeb2cebecd7c40d88c0fc"
+  integrity sha512-D/ZJY5RYV51gXdesxLej0XKKhFsux/jlY2VkcngYfOTShjlVCv4XC5X6x/DaWZH7coV4u3H2SjglzTrbEuWlvw==
   dependencies:
     lint-staged "^10.5.4"
 
-"@firestore-rules/model@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@firestore-rules/model/-/model-0.1.4.tgz#3020b7fc5e07c4d8d280e2f43a629336e1e18943"
-  integrity sha512-nkNbSqM/TM86z6otZBD2dfLFPnxKiQxtve0DC1b5VHTO77IOj7UC1pfP8ojXSvjXEYnD7n7Q8Lo+hxC8N5YC0A==
+"@firestore-rules/model@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@firestore-rules/model/-/model-0.1.8.tgz#c7d4cc2028fec1235b941682f03bf7e466b7511e"
+  integrity sha512-C5IMx/uMR3R/MzZ1fai1mSM4I0RDD/ZyDor/i1W6n94qzpbjp1wG0ZRPghSr1YkuF+dWveANBVidcopsW0Kzlg==
   dependencies:
-    "@firestore-rules/core" "^0.1.4"
+    "@firestore-rules/core" "^0.1.8"
     lint-staged "^10.5.4"
 
 "@types/parse-json@^4.0.0":
