@@ -79,7 +79,7 @@ export class FirestoreRulesModel
   args(name: string) {
     const callerFrom =
       new Error().stack?.split?.('\n')?.[2]?.trim?.()?.split?.(' ')?.[2] || ''
-    if (this._args.get(callerFrom) || false) {
+    if (this._args.get(callerFrom)?.includes?.(name)) {
       return new base.FirestoreRulesVariable(name)
     }
     this._args.set(callerFrom, [...(this._args.get(callerFrom) || []), name])

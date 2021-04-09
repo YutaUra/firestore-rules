@@ -1,4 +1,5 @@
 import { op, type } from '@firestore-rules/core'
+import { expr } from '@firestore-rules/core/lib/utils'
 import { FirestoreRulesModel } from '../src/models'
 
 describe('@firestore-rules/model/models.ts FirestoreRulesModel', () => {
@@ -41,6 +42,45 @@ function isMe(uid) {
 allow get: if isMe(uid);
 allow create: if isAuthenticated();
 allow update: if isMe(uid);
+}`)
+  })
+
+  it('two arguments usage', () => {
+    class UserCollection extends FirestoreRulesModel {
+      get path() {
+        return '/users/{uid}'
+      }
+
+      get isAuthenticated() {
+        return this.defineFunc(op.ne(this.ctx.request.auth, new type.Null()))
+      }
+      get isYuta() {
+        const uid = this.args('uid')
+        const email = this.args('email')
+        return this.defineFunc(
+          op.and(
+            this.isAuthenticated.call([]),
+            op.eq(uid, this.ctx.request.auth.uid),
+            op.eq(this.ctx.request.auth.token.email, email)
+          )
+        )
+      }
+      get() {
+        return this.isYuta.call([
+          this.variables.uid,
+          expr('yuuta3594@outlook.jp'),
+        ])
+      }
+    }
+    const userCollection = new UserCollection()
+    expect(userCollection.render()).toEqual(`match /users/{uid} {
+function isAuthenticated() {
+    return (request.auth != null);
+}
+function isYuta(uid, email) {
+    return (isAuthenticated() && (uid == request.auth.uid) && (request.auth.token.email == email));
+}
+allow get: if isYuta(uid, 'yuuta3594@outlook.jp');
 }`)
   })
 
