@@ -1,6 +1,6 @@
 {
   "name": "@firestore-rules/cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "> TODO: description",
   "author": "YutaUra <yuuta3594@outlook.jp>",
   "homepage": "",
@@ -34,8 +34,8 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@firestore-rules/core": "^0.1.2",
-    "@firestore-rules/model": "^0.1.2",
+    "@firestore-rules/core": "^0.1.3",
+    "@firestore-rules/model": "^0.1.3",
     "cosmiconfig": "^7.0.0",
     "lint-staged": "^10.5.4"
   },
