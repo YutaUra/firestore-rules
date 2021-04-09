@@ -203,13 +203,26 @@ function in_<T extends FirestoreRulesExpression>(
 
 export { in_ }
 
+export type FirestoreRulesTypes = 'string' | 'list' | 'path'
+
 export const is = (
   expr: FirestoreRulesExpression,
-  type: 'string' | 'list' | 'path'
+  type: FirestoreRulesTypes
 ) => {
   return new FirestoreRulesCondition(
     expr,
     new FirestoreRulesVariable(type),
     operator.IS
   )._as(FirestoreRulesLiteralBoolean)
+}
+
+export const ifElse = <T extends FirestoreRulesExpression>(
+  condition: FirestoreRulesLiteralBoolean,
+  True: T,
+  False: T
+) => {
+  const cls = True.constructor as IFirestoreRulesElementConstructor<T>
+  return FirestoreRulesCondition.custom(condition, '?', True, ':', False)._as(
+    cls
+  )
 }
