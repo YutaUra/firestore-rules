@@ -6,13 +6,14 @@
   "homepage": "https://github.com/YutaUra/firestore-rules#readme",
   "license": "MIT",
   "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "module": "./esm/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "esm"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -22,7 +23,9 @@
     "url": "git+https://github.com/YutaUra/firestore-rules.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "run-p build:*",
+    "build:cjs": "tsc -p tsconfig.json",
+    "build:ejs": "tsc -p tsconfig.esm.json",
     "lint:lint": "prettier --list-different './src/**/*.{js,ts,json}'",
     "lint:format": "prettier --write './src/**/*.{js,ts,json}'",
     "test": "jest",
@@ -63,7 +66,8 @@
     }
   },
   "dependencies": {
-    "lint-staged": "^10.5.4"
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5"
   },
   "gitHead": "e4d65c144ffef3d3936627a7016472758ac6f09e"
 }
