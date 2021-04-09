@@ -203,7 +203,10 @@ function in_<T extends FirestoreRulesExpression>(
 
 export { in_ }
 
-export const is = (expr: FirestoreRulesExpression, type: 'string') => {
+export const is = (
+  expr: FirestoreRulesExpression,
+  type: 'string' | 'list' | 'path'
+) => {
   return new FirestoreRulesCondition(
     expr,
     new FirestoreRulesVariable(type),
