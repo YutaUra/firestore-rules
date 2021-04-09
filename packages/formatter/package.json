@@ -1,0 +1,68 @@
+{
+  "name": "@firestore-rules/formatter",
+  "version": "0.1.5",
+  "description": "> TODO: description",
+  "author": "YutaUra <yuuta3594@outlook.jp>",
+  "homepage": "https://github.com/YutaUra/firestore-rules#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YutaUra/firestore-rules.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint:lint": "prettier --list-different './src/**/*.{js,ts,json}'",
+    "lint:format": "prettier --write './src/**/*.{js,ts,json}'",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:clearCache": "jest --clearCache"
+  },
+  "bugs": {
+    "url": "https://github.com/YutaUra/firestore-rules/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.4"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,ts,json}": [
+      "npm run lint:format"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**/*.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    }
+  },
+  "dependencies": {
+    "lint-staged": "^10.5.4"
+  }
+}

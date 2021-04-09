@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@firestore-rules/core": "^0.1.4",
+    "@firestore-rules/formatter": "^0.1.5",
     "@firestore-rules/model": "^0.1.4",
     "cosmiconfig": "^7.0.0",
     "lint-staged": "^10.5.4",

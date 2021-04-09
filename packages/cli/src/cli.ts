@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { stmt } from '@firestore-rules/core'
+import { format } from '@firestore-rules/formatter'
 import { FirestoreRulesModel } from '@firestore-rules/model'
 import { cosmiconfigSync } from 'cosmiconfig'
 import { existsSync, readFileSync, writeFileSync } from 'fs'
@@ -19,6 +20,7 @@ const {
   typescript = true,
   outputPath = 'firestore.rules',
   backupFile = true,
+  formatOption = {},
 } = searchedFor.config
 
 if (!rulesPath) {
@@ -69,4 +71,4 @@ if (backupFile && existsSync(writePath)) {
   writeFileSync(`${writePath}.backup`, oldRules)
 }
 
-writeFileSync(writePath, rules.render())
+writeFileSync(writePath, format(rules.render(), formatOption))
