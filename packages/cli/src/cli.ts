@@ -30,7 +30,7 @@ if (typescript) {
   register()
 }
 
-const cls = require(resolve(rulesPath)) as unknown
+const cls = require(resolve(rulesPath)).default as unknown
 
 if (typeof cls !== 'function') {
   console.error('default exported value is not class.')
@@ -41,7 +41,8 @@ let obj: FirestoreRulesModel
 try {
   // @ts-ignore
   obj = new cls()
-} catch {
+} catch (e) {
+  console.log(e)
   console.error('default exported value is not class.')
   process.exit(1)
 }
