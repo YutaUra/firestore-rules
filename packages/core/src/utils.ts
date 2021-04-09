@@ -24,7 +24,7 @@ export type JsTypesToRulesType<T> = T extends null
 function expr<V extends null | boolean | number | string>(
   value: V
 ): JsTypesToRulesType<V>
-function expr<V, T extends Array<V>>(value: V): JsTypesToRulesType<T>
+function expr<V, T extends Array<V>>(value: V): JsTypesToRulesType<V>
 function expr(value: any): any {
   if (value === null) return new FirestoreRulesLiteralNull()
   if (typeof value === 'boolean') return new FirestoreRulesLiteralBoolean(value)

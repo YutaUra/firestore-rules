@@ -1,4 +1,4 @@
-import { literal, op } from '@firestore-rules/core'
+import { op, type } from '@firestore-rules/core'
 import { FirestoreRulesModel } from '../src/models'
 
 describe('@firestore-rules/model/models.ts FirestoreRulesModel', () => {
@@ -9,9 +9,7 @@ describe('@firestore-rules/model/models.ts FirestoreRulesModel', () => {
       }
 
       get isAuthenticated() {
-        return this.defineFunc(
-          op.ne(this.ctx.request.auth, new literal.FirestoreRulesLiteralNull())
-        )
+        return this.defineFunc(op.ne(this.ctx.request.auth, new type.Null()))
       }
       get isMe() {
         const uid = this.args('uid')
@@ -52,9 +50,7 @@ allow update: if isMe(uid);
         return '/databases/{database}/documents'
       }
       get isAuthenticated() {
-        return this.defineFunc(
-          op.ne(this.ctx.request.auth, new literal.FirestoreRulesLiteralNull())
-        )
+        return this.defineFunc(op.ne(this.ctx.request.auth, new type.Null()))
       }
       get isMe() {
         const uid = this.args('uid')
