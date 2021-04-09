@@ -1,4 +1,11 @@
-import { base, func, literal, stmt } from '@firestore-rules/core'
+import {
+  base,
+  FirestoreRulesGlobalContext,
+  FirestoreRulesGlobalContextType,
+  func,
+  stmt,
+  Type,
+} from '@firestore-rules/core'
 import {
   FirestoreRulesExpression,
   FirestoreRulesVariable,
@@ -7,7 +14,7 @@ import {
 import '@firestore-rules/core/lib/functions'
 import { FirestoreRulesLiteralString } from '@firestore-rules/core/lib/literal'
 
-type NullOrBoolean = literal.FirestoreRulesLiteralBoolean | null
+type NullOrBoolean = Type['Boolean'] | null
 
 export type IFirestoreRulesModelConstructor = {
   new (): IFirestoreRulesModel
@@ -15,7 +22,7 @@ export type IFirestoreRulesModelConstructor = {
 
 export interface IFirestoreRulesModel extends base.IFirestoreRulesElement {
   readonly path: string
-  readonly variables: Record<string, literal.FirestoreRulesLiteralString>
+  readonly variables: Record<string, Type['String']>
 
   get(): NullOrBoolean
   list(): NullOrBoolean
@@ -29,9 +36,8 @@ export class FirestoreRulesModel
   get path(): string {
     throw Error('Not implimented')
   }
-  readonly variables: Record<string, literal.FirestoreRulesLiteralString> = {}
-  protected readonly ctx: literal.FirestoreRulesGlobalContextType =
-    literal.FirestoreRulesGlobalContext
+  readonly variables: Record<string, Type['String']> = {}
+  protected readonly ctx: FirestoreRulesGlobalContextType = FirestoreRulesGlobalContext
   protected readonly _args = new Map<string, string[]>()
   protected readonly _defined = new Map<string, boolean>()
   protected readonly _models: IFirestoreRulesModel[] = []

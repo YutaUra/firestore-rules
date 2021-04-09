@@ -134,7 +134,7 @@ export class FirestoreRulesLiteralList<
   T extends FirestoreRulesExpression
 > extends FirestoreRulesExpression {
   cls?: IFirestoreRulesElementConstructor<T>
-  constructor(value: [T, ...T[]] | FirestoreRulesExpression) {
+  constructor(value: T[] | FirestoreRulesExpression) {
     if (!Array.isArray(value)) {
       super(value)
       this.cls = undefined

@@ -1,4 +1,13 @@
-export { base, condition, func, literal, op, stmt } from '@firestore-rules/core'
+export {
+  base,
+  condition,
+  expr,
+  func,
+  op,
+  stmt,
+  type,
+  Type,
+} from '@firestore-rules/core'
 export {
   FirestoreRulesModel,
   IFirestoreRulesModel,
