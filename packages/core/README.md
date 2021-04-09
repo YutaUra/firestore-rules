@@ -1,11 +1,11 @@
-# `@firebase-rules/core`
+# `@firestore-rules/core`
 
 > TODO: description
 
 ## Usage
 
 ```
-const core = require('@firebase-rules/core');
+const core = require('@firestore-rules/core');
 
 // TODO: DEMONSTRATE API
 ```

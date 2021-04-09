@@ -1,12 +1,15 @@
 {
-  "name": "firebase-rules",
+  "name": "firestore-rules",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "lerna run build",
+    "test": "lerna run test"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.22",
     "husky": "^6.0.0",
     "lerna": "^4.0.0"
   }

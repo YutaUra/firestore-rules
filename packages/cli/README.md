@@ -1,11 +1,11 @@
-# `@firebase-rules/cli`
+# `@firestore-rules/cli`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cli = require('@firebase-rules/cli');
+const cli = require('@firestore-rules/cli');
 
 // TODO: DEMONSTRATE API
 ```
