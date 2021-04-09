@@ -14,7 +14,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "registry": "https://registry.npmjs.org"
   },
   "bin": {
     "firestore-rules": "lib/index.js"
@@ -44,5 +44,5 @@
       "npm run lint:format"
     ]
   },
-  "gitHead": "4b6817bc6fcd7603066118388888089087b46f54"
+  "gitHead": "8d4c44750a99f358bb1af75600d479391577f66a"
 }
