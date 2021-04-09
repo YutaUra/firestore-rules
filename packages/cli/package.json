@@ -41,8 +41,7 @@
   },
   "lint-staged": {
     "./src/**/*.{js,ts,json}": [
-      "npm run lint:format",
-      "git add"
+      "npm run lint:format"
     ]
   },
   "gitHead": "4b6817bc6fcd7603066118388888089087b46f54"

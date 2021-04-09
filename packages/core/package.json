@@ -37,8 +37,7 @@
   },
   "lint-staged": {
     "./src/**/*.{js,ts,json}": [
-      "npm run lint:format",
-      "git add"
+      "npm run lint:format"
     ]
   },
   "jest": {
