@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {
-    "@firestore-rules/cli": "../../packages/cli"
-  },
   "firestore-rules": {
     "rulesPath": "./src/firestore-rules.ts"
   },
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@firestore-rules/cli": "^0.1.7"
   }
 }
