@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "build": "lerna run build",
     "test": "lerna run test",
-    "publish": "yarn build && yarn lerna publish"
+    "release": "yarn build && yarn lerna publish"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
