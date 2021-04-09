@@ -15,7 +15,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -64,5 +64,6 @@
   },
   "dependencies": {
     "lint-staged": "^10.5.4"
-  }
+  },
+  "gitHead": "e4d65c144ffef3d3936627a7016472758ac6f09e"
 }
